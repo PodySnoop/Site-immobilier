@@ -1,0 +1,702 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Dans le haut de la page */
+header {
+  background-color: #117c84; /* Couleur unifiée avec pages-common.css */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Style pour le titre principal */
+header .header-container h1 {
+  color: #FFFFFF !important; /* Blanc */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3) !important;
+  margin: 0 !important;
+  font-size: 1.8em !important;
+  text-align: left !important;
+  width: auto !important;
+  display: inline-block;
+}
+
+/* Style pour les autres titres h1 */
+h1:not(header h1) {
+  font-size: 2.5em;
+  margin: 0 0 20px 0;
+  color: #13b1ea9d;
+  text-align: center;
+  width: 100%;
+}
+
+/* Style pour les autres titres h1 */
+h1:not(header h1):not(#main-title) {
+  font-size: 2.5em;
+  margin: 0 0 20px 0;
+  color: #13b1ea9d;
+}
+
+h2 {
+  font-size: 2em;
+  margin: 0 0 25px 0;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+  color: #148da5;
+}
+
+/* Titre principal de la page d'accueil */
+.page-main-title {
+  font-size: 2.2em;
+  color: #7f1515;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* Styles pour les titres de page principaux */
+.page-title {
+  background-color: #c9d1df;
+  color: rgb(255, 255, 255);
+  padding: 70px 20px;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-title h1 {
+  color: white;
+  font-size: 2.8em;
+  margin: 0 0 15px 0;
+  padding: 0;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.page-title p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.25em;
+  margin: 0 auto;
+  max-width: 800px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Effet de dégradé pour le titre de page */
+.page-title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(7, 189, 205, 0.9) 0%, rgba(5, 141, 210, 0.9) 100%);
+  z-index: 0;
+}
+
+/* Styles pour les titres de section */
+.section-title {
+  text-align: left !important;
+  margin: 0 0 20px 0 !important;
+  display: block;
+  width: 100%;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #04a4cc;
+  color: #07cf15 !important; /*Orange*/
+  font-size: 1.5em;
+  font-weight: 600;
+  position: relative;
+  padding-left: 15px;
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #15da28;
+  border-radius: 2px;
+}
+
+/* Styles généraux */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Dans le haut de la page */
+header {
+  background-color: #118420; /* Couleur unifiée avec pages-common.css */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Style spécial pour le lien de connexion */
+.login-link a {
+  background-color: #1ba47d; /*Couleur du bouton de connexion*/
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.login-link a:hover {
+  background-color: #3264ba; /*Couleur du bouton de connexion au survol*/
+  transform: translateY(-2px);
+}
+
+/* Style pour la version mobile */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  
+  .login-link {
+    margin-top: 10px;
+  }
+  
+  .login-link a {
+    margin-left: 0;
+  }
+}
+
+/* Conteneur principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* Style du contenu principal */
+main {
+  flex: 1 0 auto;
+  width: 100%;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Style spécifique pour le titre dans l'en-tête */
+header {
+  background-color: #0e94cd; /* Même couleur que le footer */
+}
+
+header h1 {
+  color: #17a9c6!important;
+  margin: 0 0 20px 0 !important;
+  font-size: 2.5em !important;
+}
+
+section {
+  margin-bottom: 30px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  margin-top: 25px;
+  border-left: 3px solid #f0f0f0;
+  transition: all 0.3s ease;
+  line-height: 1.7;
+  color: #444;
+}
+
+section p {
+  margin: 0 0 15px 0;
+  font-size: 1.05em;
+  line-height: 1.7;
+  color: #444;
+}
+
+section p:last-child {
+  margin-bottom: 0;
+}
+
+section:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+  border-left-color: #157f68;
+}
+
+/* Premier élément après le titre de page */
+.page-title + main > section:first-child {
+  margin-top: 0;
+}
+
+.search-bar {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-bottom: 40px;
+}
+
+/*Insérer titre barre de recherche*/
+.search-bar h2 {
+  margin-top: 0;
+  color: #148da5;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  align-items: end;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #148da5;
+}
+
+.form-group input[type="text"],
+.form-group select {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.range-group {
+  padding: 0 10px;
+}
+
+.range-group input[type="range"] {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.search-button {
+  background-color: #157f68;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+/*Vérifier c'est quoi */
+.search-button:hover {
+  background-color: #1ba462;
+}
+
+h1 {
+  color: #157f68;
+  margin: 0 0 15px 0;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+#priceValue,
+#surfaceValue {
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  color: #0b1987;
+  margin-top: 5px;
+}
+
+.listing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.property {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 15px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.property:hover {
+  transform: scale(1.02);
+}
+
+.property img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Styles pour les messages d'alerte */
+.alert {
+  padding: 15px;
+  margin: 15px 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+/* Styles pour le pied de page */
+footer {
+  flex-shrink: 0;
+  background-color: #117c84; /* Même couleur que l'en-tête */
+  color: white;
+  text-align: center;
+  padding: 25px 0 20px;
+  margin-top: 40px;
+}
+
+.footer-logo {
+  height: 40px;
+  width: auto;
+  margin-bottom: 15px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
+/* Styles pour les cartes de propriétés */
+.properties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.property {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+  cursor: pointer;
+}
+
+.property:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.property-image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 66.67%; /* Ratio 3:2 */
+  overflow: hidden;
+}
+
+.property-image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.property:hover .property-image-container img {
+  transform: scale(1.05);
+}
+
+.property-details {
+  padding: 1.5rem;
+}
+
+.property h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.property-description {
+  color: #666;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 4.5rem;
+}
+
+.property-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.property-price {
+  font-weight: bold;
+  color: #157f68;
+  font-size: 1.1rem;
+}
+
+.property-link {
+  color: #157f68;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.property-link:hover {
+  color: #0d5c4a;
+  text-decoration: underline;
+}
+
+/* Styles pour les cœurs de favoris */
+.coeur-favori {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.coeur-favori i {
+  font-size: 1.25rem;
+  color: #ccc;
+  transition: all 0.3s ease, transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.coeur-favori.actif i {
+  color: #ff4d4d;
+}
+
+.coeur-favori:hover {
+  background-color: white;
+  transform: scale(1.1);
+}
+
+.coeur-favori.animating i {
+  animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}
+
+/* Animation pour le bouton de favori */
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.3); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.3); }
+  70% { transform: scale(1); }
+}
+
+.coeur-favori.actif.animating i {
+  animation: heartBeat 1s;
+}
+
+/* Style pour les écrans mobiles */
+@media (max-width: 768px) {
+  .properties-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .property {
+    max-width: 100%;
+  }
+  
+  .coeur-favori {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+  
+  .coeur-favori i {
+    font-size: 1.1rem;
+  }
+}
+/* Style pour le bouton de retour */
+.btn-outline-primary {
+    transition: all 0.3s ease;
+    border-width: 2px;
+    font-weight: 500;
+}
+
+.btn-outline-primary:hover {
+    transform: translateX(-3px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Pour les petits écrans */
+@media (max-width: 768px) {
+    .d-flex.justify-content-between {
+        flex-direction: column-reverse;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .d-flex.justify-content-between > * {
+        width: 100%;
+    }
+}
+.property-image-container {
+    position: relative;
+}
+
+.btn-favori {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #ccc;
+    z-index: 10;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.btn-favori.actif {
+    color: #e74c3c;
+}
+
+.btn-favori:hover {
+    transform: scale(1.2);
+    color: #e74c3c;
+}

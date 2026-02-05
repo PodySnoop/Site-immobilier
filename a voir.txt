@@ -1,0 +1,35 @@
+e vais vous expliquer comment intégrer le formulaire de réservation dans vos pages d'annonces. Voici les étapes à suivre :
+
+Exécutez le script SQL pour créer la table reservation_visite si elle n'existe pas déjà.
+Dans votre page d'annonce (par exemple 
+annonce.php
+), ajoutez ceci à l'endroit où vous souhaitez afficher le formulaire :
+php
+<?php
+// En haut du fichier, après la récupération des données de l'annonce
+$type_bien = $_GET['type'] ?? ''; // 'location' ou 'vente'
+$bien_id = $annonce['id']; // L'ID du bien actuel
+include_once '../includes/reservation_form.php';
+?>
+Personnalisez le style dans reservation_form.php pour qu'il s'intègre bien avec votre thème actuel.
+Testez le formulaire :
+Remplissez tous les champs obligatoires
+Vérifiez la validation des emails et des numéros de téléphone
+Assurez-vous que la date minimum est bien le lendemain
+Vérifiez que les messages d'erreur s'affichent correctement
+Vérifiez que la redirection après soumission fonctionne
+Pour l'administration :
+Les réservations apparaîtront dans la section "Réservations" du tableau de bord
+Vous pouvez les gérer via la page liste_reservations.php
+Améliorations possibles :
+Envoi d'emails de confirmation
+Système de rappel automatique
+Calendrier des visites
+Gestion des conflits de rendez-vous
+Avez-vous besoin d'aide pour l'une de ces étapes ou souhaitez-vous que je vous montre comment implémenter l'une des améliorations suggérées ?
+
+Feedback submitted
+
+11m ago
+6m ago
+Press enter again to interrupt and send a new message
